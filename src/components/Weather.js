@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import Container from '@mui/material/Container';
-import {Input} from './WeatherElements'
+import image from '../image/bg1.png'
 export default function Weather() {
     
     const apiKey = '135d2ddd8fd8761dc844c00c2aa7775c'
@@ -22,14 +21,14 @@ export default function Weather() {
     }
 
     return (
-        <Container>
-            <Container>        
-            <Input
+        <div class='xl:container md:mx-auto bg-primary'>
+            <div class='container h-screen flex-col flex items-center bg-top-center bg-contain bg-no-repeat space-y-32' style={{backgroundImage: `url(${image})`}}>        
+            <input class=' mt-20 bg-inputcolor h-14 rounded-full py-3 px-6 text-gray-400 placeholder-gray-400 focus:placeholder-transparent'
                 placeholder='Search'
                 onChange={e => setCity(e.target.value)}
                 value={city}
                 onKeyPress={getCurrentWeather}/>
-            </Container>
+            
 
             {typeof currentWeatherData.main === 'undefined'?(
                 <div>
@@ -45,7 +44,7 @@ export default function Weather() {
                     <p>{currentWeatherData.weather[0].main}</p>
                 </div>
             )
-        }
-        </Container>
+        }   </div>
+        </div>
     )
 }
