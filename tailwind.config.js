@@ -9,7 +9,7 @@ module.exports = {
         'inputcolor': '#1f1f21',
       }),
       backgroundImage: {
-        'background': "url('/src/image/bg1.png')",
+        'background': "url('/src/image/cloudy.png')",
       }
     },
   },
