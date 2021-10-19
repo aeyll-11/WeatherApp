@@ -2,16 +2,12 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
-      backgroundColor: theme => ({
-        ...theme('colors'),
-        'primary': '#101014',
-        'inputcolor': '#1f1f21',
-      }),
-      backgroundImage: {
-        'background': "url('/src/image/cloudy.png')",
-      }
-    },
+    extend: {},
+    textColor: {
+      'grey': '#000000',
+      'secondary': '#ffed4a',
+      'danger': '#e3342f',
+    }
   },
   variants: {
     extend: {},
